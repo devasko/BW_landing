@@ -8,7 +8,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--    <link rel="stylesheet" href="css/fontawesome.min.css">-->
     <link rel="stylesheet" href="css/main.css">
     <title>Creative B&W landing</title>
 </head>
@@ -23,13 +22,15 @@
         <h2 class="logo">Your logo</h2>
 
         <nav class="main-nav">
-            <ul>
+            <i class="fa fa-bars x2" onclick="navToggle()"></i>
+            <ul id="menu" class="main-nav__list">
                 <li class="main-nav__item"><a href="#" class="main-nav__link active">Home</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">About</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">Services</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">Our work</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">Portfolio</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">Contact</a></li>
+                <i class="fa fa-times x2" onclick="navToggle()"></i>
             </ul>
         </nav>
     </header>
@@ -40,12 +41,15 @@
 
             <h3>And make innovative design</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consectetur consequatur cumque debitis deserunt, doloribus facere inventore labore magni, minus optio possimus, quo veritatis voluptatem! Minus non quam quis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti provident, tenetur. Dolorem dolorum ex maxime quis voluptatum! Expedita molestias mollitia natus quasi quia quod velit. Dolor magnam modi quasi totam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consectetur consequatur cumque debitis deserunt,
+                doloribus facere inventore labore magni, minus optio possimus, quo veritatis voluptatem! Minus non quam quis? Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Deleniti provident, tenetur. Dolorem dolorum ex maxime quis voluptatum!
+                Expedita molestias mollitia natus quasi quia quod velit. Dolor magnam modi quasi totam.</p>
 
             <a class="banner__btn" href="#">Read more</a>
         </div>
 
-        <img class="banner__img" src="img/bulb.jpg" alt="Bulb">
+        <img class="banner__img" src="img/bulb.png" alt="Bulb">
 
         <ul class="social">
             <li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -59,8 +63,11 @@
         <div class="element2"></div>
     </section>
 
-
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/main.js"></script>
+<script>
+    function navToggle() {
+        var element = document.getElementById('menu');
+        element.classList.toggle('show');
+    }
+</script>
 </body>
 </html>
